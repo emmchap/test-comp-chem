@@ -1,0 +1,5 @@
+- name: Install Docker SDK for python
+  become: yes
+  pip:
+    name:
+      - docker

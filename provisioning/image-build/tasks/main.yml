@@ -1,0 +1,13 @@
+- name: Build an image for dev environment
+  docker_image:
+    source: build
+    build:
+      pull: no
+      path: /vagrant
+    name: my-dev-env
+    tag: latest
+- name: Starts environment in profile bashrc
+  lineinfile:
+    dest: /home/vagrant/.bashrc
+    line: "bash /vagrant/start-env.sh"
+    owner: vagrant
