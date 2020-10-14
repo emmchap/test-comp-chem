@@ -1,7 +1,7 @@
 from rdkit import Chem
 from rdkit.Chem import rdMolDescriptors
 
-suppl = Chem.SDMolSupplier('input/824_ideal.sdf')
+suppl = Chem.SDMolSupplier('data/824_ideal.sdf')
 for mol in suppl:
     print("Number of rotatable bonds:", rdMolDescriptors.CalcNumRotatableBonds(mol))
     print("Number of rings:", rdMolDescriptors.CalcNumRings(mol))
